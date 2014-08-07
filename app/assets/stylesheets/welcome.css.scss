@@ -14,11 +14,30 @@
 	top: 0;
 	right: 0;
 	width: 30%;
+}
 
+.featured-image {
+	height: 400px;
+	overflow: hidden;
 }
 
 .birthday-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.featured-article {
+	margin: 20px;
+	text-align: center;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	border-bottom: 1px solid black;
+}
+
+.birthday-hat {
+	height: 100px;
 }
