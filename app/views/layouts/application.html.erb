@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class='main-title'>
+		<h1>Sports 'N' Stuff</h1>
+		<p>With Jim 'n' Mitch</p>
+	</div>
+	<header>
+		<ul class='nav-links'>
+			<li><%= link_to 'Articles', '#', class: 'nav-link' %></li>
+			<li><%= link_to 'Writers', '#', class: 'nav-link' %></li>
+			<li><%= link_to 'Podcast', '#', class: 'nav-link' %></li>
+		</ul>
+	</header>
 
 <%= yield %>
 

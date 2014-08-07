@@ -1,0 +1,47 @@
+header {
+	background-color: rgba(0,0,0,0.7);
+	position: relative;
+	height: 50px;
+	margin: 0;
+	text-align: center;
+}
+
+.main-title {
+	text-align: center;
+
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+.nav-links {
+	list-style: none;
+	position: absolute;
+	top: 10px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	li {
+		display: inline;
+		padding: 10px;
+		font-size: 1.5rem;
+
+		&:hover {
+			background-color: black;
+		}
+	}
+}
+
+.nav-link {
+	color: white;
+	text-decoration: none;
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover {
+		color: #3498db;
+	}
+}
