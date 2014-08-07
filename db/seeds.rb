@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+writers = ['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']
+category = ['basketball', 'soccer', 'football', 'baseball', 'other']
+
+10.times do 
+	Article.create(title: Faker::Company.catch_phrase, author: writers[rand(0..3)], category: category[rand(0..4)], body: Faker::Lorem.paragraphs(4).join('<br><br>'))
+end
