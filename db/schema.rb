@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807161937) do
+ActiveRecord::Schema.define(version: 20140807192336) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140807161937) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "casein_admin_users", force: true do |t|
@@ -42,6 +43,15 @@ ActiveRecord::Schema.define(version: 20140807161937) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "writers", force: true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.string   "specialty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar"
   end
 
 end
