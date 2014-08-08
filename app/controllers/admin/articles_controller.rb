@@ -1,4 +1,5 @@
 class Admin::ArticlesController < ApplicationController
+	before_action :require_login
 
 	def index
 		@articles = Article.order(:created_at)

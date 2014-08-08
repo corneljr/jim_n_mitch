@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :writers, only: [:show, :index]
 
   namespace :admin do 
-    resources :articles, :writers
+    resources :articles, :writers, :sessions
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
