@@ -16,3 +16,5 @@ end
 writers.each do |writer|
 	Writer.create(name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
 end
+
+Admin.create(username: 'admin', password: 'daryl', password_confirmation: 'daryl')

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JimNMitch</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<h2>Admin</h2>
+	<header>
+		<ul class='admin-nav-links'>
+			<li><%= link_to 'Articles', admin_articles_path, class: 'admin-nav' %></li>
+			<li><%= link_to 'Writers', admin_writers_path, class: 'admin-nav' %></li>
+			<li><%= link_to 'Podcast', '#', class: 'admin-nav' %></li>
+		</ul>
+	</header>
+
+<%= yield %>
+
+</body>
+</html>
