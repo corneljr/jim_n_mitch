@@ -1,9 +1,11 @@
 class WritersController < ApplicationController
-	
-	def show
-	end
 
 	def index
-		@writer = params[:writer]
+		@writers = Writer.all
+	end
+	
+	def show
+		@writer = Writer.find(params[:id])
+		@articles = Article.where(writer_id: params[:id])
 	end
 end

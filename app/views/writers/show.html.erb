@@ -1,0 +1,8 @@
+<%= image_tag @writer.avatar.profile.url %>
+<h2><%= @writer.name %></h2>
+<p><%= raw(@writer.bio) %></p>
+
+<h3>Articles</h3>
+<% @articles.each do |article| %>
+	<%= link_to article.title, article %>
+<% end %>

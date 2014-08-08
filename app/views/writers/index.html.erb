@@ -1,0 +1,5 @@
+<h2>Writers</h2>
+<% @writers.each do |writer| %>
+	<%= image_tag writer.avatar.thumb.url %>
+	<p><%= link_to writer.name, writer %></p>
+<% end %>

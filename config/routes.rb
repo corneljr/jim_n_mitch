@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-	#Casein routes
-	namespace :casein do
-		resources :writers
-		resources :articles
-	end
-
   root to: 'welcome#index'
 
   resources :articles, only: [:show, :index]
   resources :writers, only: [:show, :index]
+
+  namespace :admin do 
+    resources :articles, :writers
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

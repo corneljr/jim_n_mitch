@@ -1,6 +1,7 @@
 <h2>Articles</h2>
 <% @articles.each do |article| %>
 	<div class='article-list'>
+		<%= image_tag article.image.thumb.url %>
 		<h3><%= link_to article.title, article %></h3>
 		<h5>By <%= article.author %></h5>
 	</div>
