@@ -1,5 +1,9 @@
-<%= form_tag admin_sessions_path do %>
-	<%= text_field_tag :username, nil, placeholder: 'username' %>
-	<%= password_field_tag :password, nil, placeholder: 'password' %>
-	<%= submit_tag 'Sign in' %>
-<% end %>
+<h3 class='admin-login'>Log in</h3>
+<div class='admin-login-form'>
+	<%= form_tag admin_sessions_path do %>
+		<%= text_field_tag :username, nil, placeholder: 'username', class: 'form-input' %> <br>
+		<%= password_field_tag :password, nil, placeholder: 'password', class: 'form-input' %> <br>
+		<%= submit_tag 'Sign in', class: 'button-normal' %>
+	<% end %>
+</div>
+

@@ -1,3 +1,44 @@
-// Place all the styles related to the admin controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//main
+
+.admin-nav-links {
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline;
+		padding: 20px;
+	}
+}
+
+.admin-title {
+	text-align: center;
+}
+
+//log in
+
+.admin-login {
+	padding-top: 50px;
+	text-align: center;
+}
+
+.admin-login-form {
+	text-align: center;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button-normal {
+	margin-top: 10px;
+	background-color: #3498db;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 15px;
+}
+
+.form-input {
+	padding: 10px;
+	margin: 5px;
+	width: 200px;
+}

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def require_login
-  	unless current_user
+  	unless session[:user_id]
   		redirect_to new_admin_session_path, alert: 'You must login to view this page'
   	end
   end

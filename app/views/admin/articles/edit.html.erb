@@ -1,0 +1,7 @@
+<%= form_for @article do |f| %>
+	<%= f.file_field :image %>
+	<%= f.text_field :title %>
+	<%= f.select :author, select_from_options(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
+	<%= f.select :category, select_from_options(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
+	<%= f.text_area :body %>
+<% end %>
