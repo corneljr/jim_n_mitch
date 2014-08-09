@@ -1,5 +1,9 @@
-<h2>Writers</h2>
-<% @writers.each do |writer| %>
-	<%= image_tag writer.avatar.thumb.url %>
-	<p><%= link_to writer.name, writer %></p>
-<% end %>
+<h2 class='writers-header'>Our Writers</h2>
+<div class='writer-list'>
+	<% @writers.each do |writer| %>
+		<div class='writer-container'>
+			<%= image_tag writer.avatar.thumb.url, class: 'writer-image' %>
+			<p><strong><%= link_to writer.name, writer %></strong><br>Specialty: <%= writer.specialty %></p>
+		</div>
+	<% end %>
+</div>

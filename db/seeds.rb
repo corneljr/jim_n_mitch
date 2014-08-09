@@ -14,7 +14,7 @@ category = ['basketball', 'soccer', 'football', 'baseball', 'other']
 end
 
 writers.each do |writer|
-	Writer.create(name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
+	Writer.create(writer_id: rand(0..3), name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
 end
 
 Admin.create(username: 'admin', password: 'daryl', password_confirmation: 'daryl')

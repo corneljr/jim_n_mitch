@@ -1,0 +1,38 @@
+.writers-header {
+	text-align: center;
+}
+
+.writer-list {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.writer-container {
+	position: relative;
+	height: 100px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+
+	p {
+		position: absolute;
+		top: 15px;
+		margin: 0;
+		font-size: 1rem;
+		display: inline;
+
+		a {
+			color: black;
+
+			&:hover {
+				color: #3498db;
+			}
+		}
+	}
+}
+
+.writer-image {
+	margin: 10px;
+	display: inline;
+}

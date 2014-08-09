@@ -33,6 +33,8 @@ gem 'carrierwave'
 # Use unicorn as the app server
 # gem 'unicorn'
 gem 'rmagick', :require => 'RMagick'
+gem 'pry'
+gem 'ckeditor'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

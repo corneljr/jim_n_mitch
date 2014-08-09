@@ -13,6 +13,10 @@
 			<li><%= link_to 'Articles', admin_articles_path, class: 'admin-nav' %></li>
 			<li><%= link_to 'Writers', admin_writers_path, class: 'admin-nav' %></li>
 			<li><%= link_to 'Podcast', '#', class: 'admin-nav' %></li>
+			<% if session[:user_id] %>
+				<li><%= link_to 'Log out', admin_sessions_path, method: 'delete', class: 'admin-nav' %></li>
+			<% end %>
+
 		</ul>
 	</header>
 

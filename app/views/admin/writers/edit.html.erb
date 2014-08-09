@@ -1,0 +1,9 @@
+<h2><%= @writer.name %></h2>
+<ul>
+	<%= form_for [:admin, @writer] do |f| %>
+		<li><%= f.file_field :avatar %></li>
+		<li><%= f.text_area :bio %></li>
+		<li><%= f.select :specialty, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %></li>
+		<li><%= f.submit 'Update' %></li>
+	<% end %>
+</ul>

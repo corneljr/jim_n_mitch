@@ -1,0 +1,7 @@
+<h2>Writers</h2>
+<%= link_to 'New Writer', new_admin_writer_path %>
+<ul>
+<% @writers.each do |writer| %>
+	<li><%= writer.name %> <%= link_to 'edit', edit_admin_writer_path(writer) %></li>
+<% end %>
+</ul>

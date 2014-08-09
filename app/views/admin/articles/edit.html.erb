@@ -1,4 +1,4 @@
-<%= form_for @article do |f| %>
+<%= form_for [:admin, @article] do |f| %>
 	<%= f.file_field :image %>
 	<%= f.text_field :title %>
 	<%= f.select :author, select_from_options(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
