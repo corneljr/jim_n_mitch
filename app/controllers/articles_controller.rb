@@ -5,9 +5,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def sports
+		@articles = Article.where(article_type: 'sports')
 	end
 
 	def stuff 
+		@articles = Article.where(article_type: 'stuff')
 	end
 
 end

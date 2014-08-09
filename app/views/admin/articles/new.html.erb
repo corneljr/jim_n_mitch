@@ -1,11 +1,28 @@
 <h2>New Article</h2>
-<ul>
-	<%= form_for [:admin, @article] do |f| %>
-		<li><%= f.label :image %><%= f.file_field :image %></li>
-		<li><%= f.label :title %><%= f.text_field :title %></li>
-		<li><%= f.label :author %><%= f.select :author, options_for_select(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %></li>
-		<li><%= f.label :category %><%= f.select :category, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %></li>
-		<li><%= f.label :body %><%= f.text_area :body %></li>
-		<li><%= f.submit 'Post' %></li>
-	<% end %>
-</ul>
+
+<%= form_for [:admin, @article] do |f| %>
+	<div class='form-item'>
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :author %>
+		<%= f.select :author, options_for_select(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :category %>
+		<%= f.select :category, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :article_type %>
+		<%= f.select :article_type, options_for_select(['sports','stuff']) %>
+	</div>
+	<div class='form=item'>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+	</div>
+<% end %>

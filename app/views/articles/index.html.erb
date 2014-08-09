@@ -1,9 +1,0 @@
-<h2 class='articles-header'>Articles</h2>
-<div class='articles-container'>
-	<% @articles.each do |article| %>
-		<div class='article-list'>
-			<%= image_tag article.image.thumb.url %>
-			<h3><%= link_to article.title, article %><br>By <%= link_to article.author, writer_path(article.writer_id) %></h3>
-		</div>
-	<% end %>
-</div>

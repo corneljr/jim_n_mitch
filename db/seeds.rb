@@ -7,10 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 writers = ['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard', 'Ian King']
-category = ['basketball', 'soccer', 'football', 'baseball', 'everything']
+category = ['basketball', 'soccer', 'football', 'baseball', 'stuff']
+type = ['sports','stuff']
 
 10.times do 
-	Article.create(writer_id: rand(1..5), title: Faker::Company.catch_phrase, author: writers[rand(0..3)], category: category[rand(0..4)], body: Faker::Lorem.paragraphs(4).join('<br><br>'))
+	Article.create(article_type: type[rand(0..1)], writer_id: rand(1..5), title: Faker::Company.catch_phrase, author: writers[rand(0..3)], category: category[rand(0..4)], body: Faker::Lorem.paragraphs(4).join('<br><br>'))
 end
 
 writers.each do |writer|
