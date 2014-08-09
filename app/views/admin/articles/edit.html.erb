@@ -1,7 +1,25 @@
+<h3><%= @article.title %></h3>
+<h5><%= @article.author %></h5>
+
 <%= form_for [:admin, @article] do |f| %>
-	<%= f.file_field :image %>
-	<%= f.text_field :title %>
-	<%= f.select :author, select_from_options(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
-	<%= f.select :category, select_from_options(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
-	<%= f.text_area :body %>
+	<div class='form-item'>
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :author %>
+		<%= f.select :author, options_for_select(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
+	</div>
+	<div class='form-item'>
+		<%= f.label :category %>
+		<%= f.select :category, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
+	</div>
+	<div class='form=item'>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+	</div>
 <% end %>

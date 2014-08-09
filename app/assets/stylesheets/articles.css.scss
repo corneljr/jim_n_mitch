@@ -1,0 +1,36 @@
+.articles-header {
+	text-align: center;
+}
+
+.articles-container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-list {
+	position: relative;
+	width: 500px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+
+	img {
+		margin: 10px;
+		display:inline;
+	}
+
+	h3 {
+		position: absolute;
+		top: 0;
+		display: inline;
+
+		a {
+			color: black;
+
+			&:hover {
+				color: #3498db;
+			}
+		}
+	}
+}

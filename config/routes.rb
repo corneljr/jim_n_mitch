@@ -2,12 +2,15 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  resources :articles, only: [:show, :index]
+  resources :articles, only: [:show]
   resources :writers, only: [:show, :index]
 
   namespace :admin do 
     resources :articles, :writers, :sessions
   end
+
+  get 'articles/sports', to: 'articles#sports', as: 'sports_articles'
+  get 'articles/stuff', to: 'articles#stuff', as: 'stuff_articles'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

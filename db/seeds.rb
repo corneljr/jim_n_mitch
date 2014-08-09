@@ -6,15 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-writers = ['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']
-category = ['basketball', 'soccer', 'football', 'baseball', 'other']
+writers = ['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard', 'Ian King']
+category = ['basketball', 'soccer', 'football', 'baseball', 'everything']
 
 10.times do 
-	Article.create(title: Faker::Company.catch_phrase, author: writers[rand(0..3)], category: category[rand(0..4)], body: Faker::Lorem.paragraphs(4).join('<br><br>'))
+	Article.create(writer_id: rand(1..5), title: Faker::Company.catch_phrase, author: writers[rand(0..3)], category: category[rand(0..4)], body: Faker::Lorem.paragraphs(4).join('<br><br>'))
 end
 
 writers.each do |writer|
-	Writer.create(writer_id: rand(0..3), name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
+	Writer.create(name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
 end
 
 Admin.create(username: 'admin', password: 'daryl', password_confirmation: 'daryl')
