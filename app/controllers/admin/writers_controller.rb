@@ -1,6 +1,8 @@
 class Admin::WritersController < ApplicationController
 	layout 'admin'
+
 	def new
+		@writer = Writer.new
 	end
 
 	def edit

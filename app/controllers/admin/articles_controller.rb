@@ -28,6 +28,22 @@ class Admin::ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
+	def update
+		@article = Article.find(params[:id])
+		@article.assign_attributes(article_params)
+		if @article.save
+			redirect_to admin_articles_path 
+		else
+			render :edit
+		end
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		redirect_to admin_articles_path
+	end
+
 	private
 
 	def article_params

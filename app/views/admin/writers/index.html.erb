@@ -1,7 +1,9 @@
-<h2>Writers</h2>
-<%= link_to 'New Writer', new_admin_writer_path %>
-<ul>
-<% @writers.each do |writer| %>
-	<li><%= writer.name %> <%= link_to 'edit', edit_admin_writer_path(writer) %></li>
-<% end %>
-</ul>
+<h2 class='admin-writers-header'>Writers</h2>
+<p class='new-writer-link'><%= link_to '+ New Writer', new_admin_writer_path %></p>
+<div class='admin-writers-list'>
+	<ul>
+	<% @writers.each do |writer| %>
+		<li><%= writer.name %> <%= link_to 'edit', edit_admin_writer_path(writer) %></li>
+	<% end %>
+	</ul>
+</div>

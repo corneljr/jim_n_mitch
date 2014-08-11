@@ -1,0 +1,38 @@
+<h3>New Writer</h3>
+
+<div class='form'>
+	<%= form_for [:admin, @writer] do |f| %>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :avatar %>
+			</div>
+			<div class='form-input'>
+				<%= f.file_field :avatar %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :name %>
+			</div>
+			<div class='form-input'>
+				<%= f.text_field :name %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :bio %>
+			</div>
+			<div class='form-input'>
+				<%= f.file_area :bio %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :specialty %>
+			</div>
+			<div class='form-input'>
+				<%= f.text_field :specialty %>
+			</div>
+		</div>
+	<% end %>
+</div>

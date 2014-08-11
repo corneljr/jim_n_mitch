@@ -1,28 +1,57 @@
-<h2>New Article</h2>
+<h2 class='new-article'>New Article</h2>
 
-<%= form_for [:admin, @article] do |f| %>
-	<div class='form-item'>
-		<%= f.label :image %>
-		<%= f.file_field :image %>
-	</div>
-	<div class='form-item'>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</div>
-	<div class='form-item'>
-		<%= f.label :author %>
-		<%= f.select :author, options_for_select(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
-	</div>
-	<div class='form-item'>
-		<%= f.label :category %>
-		<%= f.select :category, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
-	</div>
-	<div class='form-item'>
-		<%= f.label :article_type %>
-		<%= f.select :article_type, options_for_select(['sports','stuff']) %>
-	</div>
-	<div class='form=item'>
-		<%= f.label :body %>
-		<%= f.text_area :body %>
-	</div>
-<% end %>
+<div class='form'>
+	<%= form_for [:admin, @article] do |f| %>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :image %>
+			</div>
+			<div class='form-input'>
+				<%= f.file_field :image %>
+			</div>
+		</div>
+		<div class='form-label'>
+			<div class='form-label'>
+				<%= f.label :title %>
+			</div>
+			<div class='form-input'>
+				<%= f.text_field :title %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+			<%= f.label :author %>
+			</div>
+			<div class='form-input'>
+				<%= f.select :author, options_for_select(['Anthony Rigato', "Peter Scholtes", 'James Lowe', 'Mitch Sharrard']) %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :category %>
+			</div>
+			<div class='form-input'>
+				<%= f.select :category, options_for_select(['basketball', 'soccer', 'football', 'baseball', 'other']) %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :article_type %>
+			</div>
+			<div class='form-input'>
+				<%= f.select :article_type, options_for_select(['sports','stuff']) %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<div class='form-label'>
+				<%= f.label :body %>
+			</div>
+			<div class='form-input'>
+				<%= f.text_area :body, class: 'ckeditor' %>
+			</div>
+		</div>
+		<div class='form-item'>
+			<%= f.submit 'Post' %>
+		</div>
+	<% end %>
+</div>
