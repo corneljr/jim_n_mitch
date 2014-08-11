@@ -1,6 +1,6 @@
 <h2>New Podcast</h2>
 
-<%= form_for [:admin, @podcast] do |f| %>
+<%= form_for [:admin, @podcast], html: { multipart: true } do |f| %>
 	<div class='form-item'>
 		<div class='form-label'>
 			<%= f.label :title %>
