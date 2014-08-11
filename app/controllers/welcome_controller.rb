@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
 		unless @article 
 			@article = Article.order('created_at DESC').first
 		end
+		@poll = Poll.last
 	end
 end

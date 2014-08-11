@@ -16,6 +16,15 @@
 			<h2>Happy Birthday to Arturs Urbe!</h2>
 			<p>The world would not be the same if this man had never graced it's presence.</p>
 		</div>
+		<div class='poll-container'>
+			<%= form_tag new_admin_vote_path do %>
+				<% i = 0 %>
+				<% @poll.options.each do |option| %>
+					<% i++ %>
+					<%= radio_button_tag("option#{i}", option.option_text) %>
+				<% end %>
+			<% end %>
+		</div>
 		<div class='twitter'>
 			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/SPORTSnSTUFFpod" data-widget-id="484161539394379776">Tweets by @SPORTSnSTUFFpod</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
