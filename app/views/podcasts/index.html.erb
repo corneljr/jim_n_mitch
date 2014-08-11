@@ -1,0 +1,7 @@
+<h2>Podcasts</h2>
+
+<ul>
+	<%= @podcasts.each do |podcast| %>
+		<li><%= link_to podcast.title, podcast.podcast_file.url %></li>
+	<% end %>
+</ul>

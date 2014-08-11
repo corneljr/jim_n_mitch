@@ -1,4 +1,5 @@
 class Admin::PodcastsController < ApplicationController
+	layout 'admin'
 
 	def new
 		@podcast = Podcast.new
@@ -6,8 +7,8 @@ class Admin::PodcastsController < ApplicationController
 
 	def create
 		@podcast = Podcast.new(podcast_params)
-		binding.pry
 		if @podcast.save
+			binding.pry
 			redirect_to admin_podcasts_path
 		else
 			render :new
@@ -34,7 +35,7 @@ class Admin::PodcastsController < ApplicationController
 private
 
 	def podcast_params
-		params.require(:podcast).permit(:title, :podcast)
+		params.require(:podcast).permit(:title, :podcast_file)
 	end
 
 end

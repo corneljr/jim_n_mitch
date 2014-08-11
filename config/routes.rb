@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:show]
   resources :writers, only: [:show, :index]
+  resources :podcasts, only: [:index]
 
   namespace :admin do 
     resources :articles, :writers, :sessions, :podcasts
