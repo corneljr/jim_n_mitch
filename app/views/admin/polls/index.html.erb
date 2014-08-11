@@ -1,0 +1,8 @@
+<h2>Polls</h2>
+<%= link_to '+ New Poll', new_admin_poll_path %>
+
+<ul>
+	<% @polls.each do |poll| %>
+		<li><%= poll.question %><%= link_to 'Results', admin_poll_path(poll) %><%= link_to 'Edit', edit_admin_poll_path(poll) %></li>
+	<% end %>
+</ul>

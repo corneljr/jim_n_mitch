@@ -37,6 +37,7 @@ gem 'pry'
 gem 'ckeditor', '4.0.4'
 gem 'figaro'
 gem 'fog'
+gem 'cocoon'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
