@@ -1,14 +1,18 @@
 <div class='podcast-container'>
-	<h2 class='podcast-title'>Podcasts</h2>
+	<h2>Podcasts</h2>
 	<h4 class='podcast-links'>Check us out on <%= link_to 'itunes', 'https://itunes.apple.com/ca/podcast/sports-n-stuff-with-jim-n-mitch/id681295536?mt=2' %> and <%= link_to 'podbean', 'snswithjnm.podbean.com' %>!</h4>
 
 	<section id='audio'>
-		
 	</section>
 
-	<ul>
-		<% @podcasts.each do |podcast| %>
-			<li><%= podcast.title %> <%= link_to 'Listen', podcast.podcast_file.url, class: 'podcast-play button-tiny' %> <%= link_to 'Download', podcast.podcast_file.url, class: 'podcast-download button-tiny' %></li>
-		<% end %>
-	</ul>
+	<% @podcasts.each do |podcast| %>
+		<div class='podcast-list-container'>
+			<div class='podcast-title'>
+				<h3><%= podcast.title %></h3>
+			</div> 
+			<div class='podcast-buttons'>
+				<%= link_to 'Listen', podcast.podcast_file.url, class: 'podcast-play button-tiny' %> <%= link_to 'Download', podcast.podcast_file.url, class: 'podcast-download button-tiny' %>
+			</div>
+		</div>
+	<% end %>
 </div>

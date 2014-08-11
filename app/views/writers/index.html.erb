@@ -1,9 +1,15 @@
 <h2 class='writers-header'>The Boys</h2>
-<div class='writer-list'>
-	<% @writers.each do |writer| %>
-		<div class='writer-container'>
-			<%= image_tag writer.avatar.thumb.url, class: 'writer-image' %>
-			<p><strong><%= link_to writer.name, writer %></strong><br>Specialty: <%= writer.specialty %></p>
-		</div>
-	<% end %>
+<% @writers.each do |writer| %>
+	<div class='writer-list'>
+		<%= link_to writer do %>
+			<div class='writer-list-image'>
+				<%= image_tag writer.avatar.medium.url, class: 'writer-image' %>
+			</div>
+			<div class='writer-list-info'>
+				<h3><%= writer.name %></h3>
+				<p>Specialty: <%= writer.specialty %></p>
+			</div>
+		<% end %>
+	</div>
+<% end %>
 </div>

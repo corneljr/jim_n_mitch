@@ -16,3 +16,38 @@
 		}
 	}
 }
+
+.podcast-list-container {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.podcast-title {
+	text-align: right;
+	position: absolute;
+	width: 50%;
+	height: 50px;
+	left: 0;
+
+	h3 {
+		margin: 0;
+	}
+}
+
+.podcast-buttons {
+	position: absolute;
+	text-align: left;
+	right: 0;
+	width: 50%;
+	height: 50px;
+
+	a {
+		color: white;
+
+		&:visited {
+			color: white;
+		}
+	}
+}
