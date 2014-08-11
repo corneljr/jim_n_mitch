@@ -23,6 +23,7 @@ class Admin::PodcastsController < ApplicationController
 	end
 
 	def update
+		@podcast = Podcast.find(params[:id])
 		@podcast.assign_attributes(podcast_params)
 		if @podcast.save
 			redirect_to admin_podcasts_path
@@ -34,7 +35,7 @@ class Admin::PodcastsController < ApplicationController
 private
 
 	def podcast_params
-		params.require(:podcast).permit(:title, :podcast_file)
+		params.require(:podcast).permit(:title, :podcast_file, :description)
 	end
 
 end
