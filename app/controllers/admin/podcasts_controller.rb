@@ -18,9 +18,16 @@ class Admin::PodcastsController < ApplicationController
 	end
 
 	def edit
+		@podcast = Podcast.find(params[:id])
 	end
 
 	def update
+		@podcast.assign_attributes(podcast_params)
+		if @podcast.save
+			redirect_to admin_podcasts_path
+		else
+			render :edit
+		end
 	end
 
 private

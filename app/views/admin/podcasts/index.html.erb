@@ -1,0 +1,8 @@
+<h3>Podcasts</h3>
+<p><%= link_to '+ New Podcast', new_admin_podcast_path %></p>
+
+<ul>
+	<%= @podcasts.each do |podcast| %>
+		<li><%= podcast.title %> <%= link_to 'Edit', edit_admin_podcast_path(podcast) %> <%= link_to 'Delete', admin_podcast_path(podcast), method: 'delete', data: { confirm: 'Are you sure bud?' } %></li>
+	<% end %>
+</ul>
