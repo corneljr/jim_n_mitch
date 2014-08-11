@@ -14,6 +14,13 @@ class Admin::WritersController < ApplicationController
 	end
 
 	def create
+		@writer = Writer.new(writer_params)
+		binding.pry
+		if @writer.save 
+			redirect_to admin_writers_path
+		else
+			render :new
+		end
 	end
 
 	def update

@@ -34,4 +34,16 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+
+  CarrierWave.configure do |config|
+    config.fog_credentials = {
+      provider: 'AWS', 
+      aws_access_key_id: Figaro.env.aws_access_key_id, 
+      aws_secret_access_key: Figaro.env.aws_secret_access_key
+    }
+
+  config.fog_directory = 'sportsnstuff-dev'
+  config.fog_public = true
+  end
 end

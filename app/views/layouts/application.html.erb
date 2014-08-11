@@ -13,10 +13,18 @@
 	</div>
 	<header class='main-header'>
 		<ul class='nav-links'>
-			<li><%= link_to 'Sports', sports_articles_path, class: 'nav-link' %></li>
-			<li><%= link_to 'Pop Culture', stuff_articles_path, class: 'nav-link' %></li>
-			<li><%= link_to 'Writers', writers_path, class: 'nav-link' %></li>
-			<li><%= link_to 'Podcast', '#', class: 'nav-link' %></li>
+			<%= link_to sports_articles_path, class: 'nav-link' do %>
+				<li>Sports</li>
+			<% end %>
+			<%= link_to stuff_articles_path, class: 'nav-link' do %>
+				<li>Pop Culture</li>
+			<% end %>
+			<%= link_to writers_path, class: 'nav-link' do %>
+				<li>Writers</li>
+			<% end %>
+			<%= link_to '#', class: 'nav-link' do %>
+				<li>Podcast</li>
+			<% end %>
 		</ul>
 	</header>
 

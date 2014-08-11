@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :writers, only: [:show, :index]
 
   namespace :admin do 
-    resources :articles, :writers, :sessions
+    resources :articles, :writers, :sessions, :podcasts
   end
 
   mount Ckeditor::Engine => '/ckeditor'

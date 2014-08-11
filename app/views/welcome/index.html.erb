@@ -2,10 +2,12 @@
 	<div class='column-70'>
 		
 		<div class='featured-article'>
-			<%= image_tag 'http://globalvillageextra.com/wp-content/uploads/2014/06/EPL_Logo.jpg', class: 'featured-image' %>
-			<h2>English Premier League Preview</h2>
-			<p>Breaking down the winners and losers of the offseason, and of course some predictions...</p>
-			<h5>By Anthony Rigato</h5>
+			<%= link_to @article do %>
+				<%= image_tag @article.image.featured.url, class: 'featured-image' %>
+				<h2><%= @article.title %></h2>
+				<p><%= truncate(@article.body, length: 	100) %></p>
+				<h5>By <%= @article.author %></h5>
+			<% end %>
 		</div>
 	</div>
 	<div class='column-30'>

@@ -8,6 +8,11 @@ class Admin::ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
+
+		if @article.featured
+			Article.update_featured
+		end
+
 		@article.writer_id = Writer.find_by(name: params[:article][:author]).id
 		if @article.save
 			redirect_to admin_articles_path, notice: 'article successfully created'
@@ -31,6 +36,11 @@ class Admin::ArticlesController < ApplicationController
 	def update
 		@article = Article.find(params[:id])
 		@article.assign_attributes(article_params)
+		binding.pry
+		if @article.featured
+			Article.update_featured
+		end
+		binding.pry
 		if @article.save
 			redirect_to admin_articles_path 
 		else
@@ -47,7 +57,7 @@ class Admin::ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :author, :category, :body, :image)
+		params.require(:article).permit(:title, :featured, :author, :category, :body, :image)
 	end
 
 end

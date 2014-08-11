@@ -35,6 +35,8 @@ gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 gem 'pry'
 gem 'ckeditor', '4.0.4'
+gem 'figaro'
+gem 'fog'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
