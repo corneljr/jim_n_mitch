@@ -1,6 +1,9 @@
 class Admin::VotesController < ApplicationController
 
 	def create
-		binding.pry
+		@vote = Vote.new
+		@vote.option_id = params[:option]
+		@vote.save
+		redirect_to root_path
 	end
 end
