@@ -19,12 +19,12 @@
 		<div class='poll-container'>
 			<h2>Weekly Poll</h2>
 			<h4><%= @poll.question %></h4>
-			<%= form_tag admin_votes_path do %>
+			<%= form_tag admin_votes_path, class: 'poll-form' do %>
 				<ul>
 				<% @poll.options.each do |option| %>
 					<li><%= radio_button_tag(:option, option.id) %><%= label_tag(:option, option.option_text) %></li>
 				<% end %>
-				<%= submit_tag 'Submit' %>
+				<%= submit_tag 'Submit', class: 'button-normal poll-submit' %>
 				</ul>
 			<% end %>
 		</div>

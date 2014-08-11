@@ -2,8 +2,13 @@ class Admin::VotesController < ApplicationController
 
 	def create
 		@vote = Vote.new
-		@vote.option_id = params[:option]
+		@vote.option_id = params[:choice]
 		@vote.save
-		redirect_to root_path
+
+		if request.xhr?
+			render partial: 'poll'
+		else
+			redirect_to root_path
+		end
 	end
 end
