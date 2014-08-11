@@ -1,9 +1,9 @@
 <h2>Edit Poll</h2>
 
-<%= form_for @poll, html: { multipart: true } do |f| %>
+<%= form_for [:admin, @poll], html: { multipart: true } do |f| %>
 	<div class='form-item'>
 		<div class='form-label'>
-			<%= f.label :image %>
+			<%= f.label :question %>
 		</div>
 		<div class='form-input'>
 			<%= f.text_field :question %>
@@ -11,13 +11,14 @@
 	</div>
 	<div class='form-item'>
 		<%= fields_for :options do |r| %>
-			<div class='form-label'>
-				<%= r.label :option_text %>
-			</div>
-			<div class='form-input'>
-				<%= f.text_field :option_text %>
-			</div>
+			<%= render 'option_fields', :f => r %>
 		<% end %>
-		 <%= link_to_add_association 'add another image', f, :options, class: "btn-light-green-sm" %>
+		 <%= link_to_add_association 'add another choice', f, :options %>
 	</div>
+	<div class='form-item'>
+		<div class='form-input'>
+			<%= f.submit 'Create' %>
+		</div>
+	</div>
+<% end %>
 		

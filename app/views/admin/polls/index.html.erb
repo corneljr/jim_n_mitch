@@ -3,6 +3,6 @@
 
 <ul>
 	<% @polls.each do |poll| %>
-		<li><%= poll.question %><%= link_to 'Results', admin_poll_path(poll) %><%= link_to 'Edit', edit_admin_poll_path(poll) %></li>
+		<li><%= poll.question %><%= link_to 'Results', admin_poll_path(poll) %><%#= link_to 'Edit', edit_admin_poll_path(poll) %></li>
 	<% end %>
 </ul>
