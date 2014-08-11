@@ -1,7 +1,12 @@
 <h2>Podcasts</h2>
+<h4>Check us out on <%= link_to 'itunes', 'https://itunes.apple.com/ca/podcast/sports-n-stuff-with-jim-n-mitch/id681295536?mt=2' %> and <%= link_to 'podbean', 'snswithjnm.podbean.com' %>!</h4>
+
+<section id='audio'>
+	
+</section>
 
 <ul>
-	<%= @podcasts.each do |podcast| %>
-		<li><%= link_to podcast.title, podcast.podcast_file.url %></li>
+	<% @podcasts.each do |podcast| %>
+		<li><%= podcast.title %> <%= link_to 'Listen', podcast.podcast_file.url, class: 'podcast-play' %> <%= link_to 'Download', podcast.podcast_file.url, class: 'podcast-download' %></li>
 	<% end %>
 </ul>
