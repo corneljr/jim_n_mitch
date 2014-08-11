@@ -5,10 +5,20 @@
 			<%= link_to @article do %>
 				<%= image_tag @article.image.featured.url, class: 'featured-image' %>
 				<h2><%= @article.title %></h2>
-				<p><%= truncate(@article.body, length: 	100) %></p>
+				<p><%= raw truncate(@article.body, length: 200) %></p>
 				<h5>By <%= @article.author %></h5>
 			<% end %>
 		</div>
+		<% @articles.each do |article| %>
+			<div class='secondary-articles'>
+				<%= link_to article do %>
+					<%= image_tag @article.image.secondary.url, class: 'secondary-image' %>
+					<h4><%= article.title %></h4>
+					<h5>By <%= article.author %></h5>
+					<p><%= truncate(article.body, length: 100) %></p>
+				<% end %>
+			</div>
+		<% end %>
 	</div>
 	<div class='column-30'>
 		<div class='birthday-container'>
