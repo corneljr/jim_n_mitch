@@ -1,10 +1,11 @@
 .main-header {
 	background-color: rgba(0,0,0,0.7);
 	position: relative;
-	height: 50px;
+	height: 40px;
 	margin: 0;
 	text-align: center;
 	margin-bottom: 10px;
+	border-radius: 20px;
 }
 
 .main-title {
@@ -40,7 +41,7 @@
 	li {
 		display: inline;
 		padding: 10px;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 
 		&:hover {
 			background-color: black;

@@ -1,3 +1,18 @@
-// Place all the styles related to the podcasts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.podcast-container {
+	text-align: center;
+}
+
+.podcast-links {
+
+	a {
+		color: #1abc9c;
+
+		&:visited {
+			color: #1abc9c;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
