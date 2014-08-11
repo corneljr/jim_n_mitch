@@ -30,6 +30,19 @@
 	padding: 10px;
 }
 
+.poll-container {
+	background-color: #ecf0f1;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px;
+
+	li {
+		text-align: left;
+	}
+}
+
 .featured-article {
 	margin: 20px;
 	text-align: center;

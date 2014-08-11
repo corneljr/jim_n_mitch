@@ -11,6 +11,7 @@ class Admin::PollsController < ApplicationController
 
 	def create
 		@poll = Poll.new(poll_params)
+		binding.pry
 		if @poll.save
 			redirect_to admin_polls_path
 		else
@@ -40,7 +41,7 @@ class Admin::PollsController < ApplicationController
 private
 
 	def poll_params
-		params.require(:poll).permit(:question, options: [:id, :option_text, :_destroy])
+		params.require(:poll).permit(:question, options_attributes: [:id, :option_text, :_destroy])
 	end
 
 end

@@ -17,12 +17,15 @@
 			<p>The world would not be the same if this man had never graced it's presence.</p>
 		</div>
 		<div class='poll-container'>
+			<h2>Weekly Poll</h2>
+			<h4><%= @poll.question %></h4>
 			<%= form_tag new_admin_vote_path do %>
-				<% i = 0 %>
+				<ul>
 				<% @poll.options.each do |option| %>
-					<% i++ %>
-					<%= radio_button_tag("option#{i}", option.option_text) %>
+					<li><%= radio_button_tag(:option, option.id) %><%= label_tag(:option, option.option_text) %></li>
 				<% end %>
+				<%= submit_tag 'Submit' %>
+				</ul>
 			<% end %>
 		</div>
 		<div class='twitter'>
