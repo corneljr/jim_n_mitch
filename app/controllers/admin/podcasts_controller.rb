@@ -8,7 +8,6 @@ class Admin::PodcastsController < ApplicationController
 	def create
 		@podcast = Podcast.new(podcast_params)
 		if @podcast.save
-			binding.pry
 			redirect_to admin_podcasts_path
 		else
 			render :new
