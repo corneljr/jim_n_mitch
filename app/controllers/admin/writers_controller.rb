@@ -16,7 +16,6 @@ class Admin::WritersController < ApplicationController
 
 	def create
 		@writer = Writer.new(writer_params)
-		binding.pry
 		if @writer.save 
 			redirect_to admin_writers_path
 		else
