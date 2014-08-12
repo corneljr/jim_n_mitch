@@ -11,7 +11,6 @@ class Admin::PollsController < ApplicationController
 	end
 
 	def create
-		binding.pry
 		@poll = Poll.new(poll_params)
 		if @poll.save
 			redirect_to admin_polls_path
