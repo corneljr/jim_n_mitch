@@ -23,8 +23,8 @@
 	<div class='column-30'>
 		<div class='birthday-container'>
 			<%= image_tag '/img/birthday.png', class: 'birthday-hat' %>
-			<h2>Happy Birthday to Arturs Urbe!</h2>
-			<p>The world would not be the same if this man had never graced it's presence.</p>
+			<h2>Happy Birthday to <%= @birthday.name %>!</h2>
+			<p><%= @birthday.description %></p>
 		</div>
 		<div class='poll-container'>
 			<h2>Weekly Poll</h2>

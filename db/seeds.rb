@@ -18,4 +18,6 @@ writers.each do |writer|
 	Writer.create(name: writer, bio: Faker::Lorem.paragraphs(4).join('<br>'), specialty: category[rand(0..4)])
 end
 
+Birthday.create(name: 'Arturs Urbe', description: "The world would not be the same if this man had never graced it's presence")
+
 Admin.create(username: 'admin', password: 'daryl', password_confirmation: 'daryl')

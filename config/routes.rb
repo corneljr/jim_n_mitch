@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :podcasts, only: [:index]
 
   namespace :admin do 
-    resources :articles, :writers, :sessions, :podcasts, :polls, :votes
+    resources :articles, :writers, :sessions, :podcasts, :polls, :votes, :birthdays
   end
 
   mount Ckeditor::Engine => '/ckeditor'

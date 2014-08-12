@@ -52,6 +52,10 @@ li {
 	&:hover {
 		background-color: #2980b9;
 	}
+
+	&:visited {
+		color: white;
+	}
 }
 
 .button-normal {
@@ -63,5 +67,9 @@ li {
 
 	&:hover {
 		background-color: #2980b9;
+	}
+
+	&:visited {
+		color: white;
 	}
 }

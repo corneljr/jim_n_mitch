@@ -1,4 +1,5 @@
 class Admin::PollsController < ApplicationController
+	layout 'admin'
 
 	def index
 		@polls = Poll.order('created_at DESC')
@@ -10,6 +11,7 @@ class Admin::PollsController < ApplicationController
 	end
 
 	def create
+		binding.pry
 		@poll = Poll.new(poll_params)
 		if @poll.save
 			redirect_to admin_polls_path
