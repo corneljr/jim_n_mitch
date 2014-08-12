@@ -1,8 +1,16 @@
-<%= image_tag @writer.avatar.profile.url %>
-<h2><%= @writer.name %></h2>
-<p><%= raw(@writer.bio) %></p>
-
-<h3>Articles</h3>
-<% @articles.each do |article| %>
-	<%= link_to article.title, article %>
-<% end %>
+<div class='center'>
+	<div class='writer-info'>
+		<h2><%= @writer.name %></h2>
+		<%= image_tag @writer.avatar.profile.url %>
+		<h3>Bio</h3>
+		<p class='writer-bio'><%= raw(@writer.bio) %></p>
+		<h3>Articles</h3>
+		<ul class='writer-article-list'>
+		<% @articles.each do |article| %>
+			<li><%= link_to article.title, article %></li>
+		<% end %>
+		</ul>
+	</div>
+</div>
+<br>
+<br>
