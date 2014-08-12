@@ -26,18 +26,21 @@
 			<h2>Happy Birthday to <%= @birthday.name %>!</h2>
 			<p><%= @birthday.description %></p>
 		</div>
-		<div class='poll-container'>
-			<h2>Weekly Poll</h2>
-			<h4><%= @poll.question %></h4>
-			<%= form_tag admin_votes_path, class: 'poll-form' do %>
-				<ul>
-				<% @poll.options.each do |option| %>
-					<li><%= radio_button_tag(:option, option.id) %><%= label_tag(:option, option.option_text) %></li>
+
+		<% if @poll %>
+			<div class='poll-container'>
+				<h2>Weekly Poll</h2>
+				<h4><%= @poll.question %></h4>
+				<%= form_tag admin_votes_path, class: 'poll-form' do %>
+					<ul>
+					<% @poll.options.each do |option| %>
+						<li><%= radio_button_tag(:option, option.id) %><%= label_tag(:option, option.option_text) %></li>
+					<% end %>
+					<%= submit_tag 'Submit', class: 'button-normal poll-submit' %>
+					</ul>
 				<% end %>
-				<%= submit_tag 'Submit', class: 'button-normal poll-submit' %>
-				</ul>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
 		<div class='twitter'>
 			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/SPORTSnSTUFFpod" data-widget-id="484161539394379776">Tweets by @SPORTSnSTUFFpod</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
