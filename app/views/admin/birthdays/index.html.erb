@@ -1,10 +1,12 @@
-<h2>Birthdays</h2>
-<%= link_to '+ New Birthday', new_admin_birthday_path %>
+<div class='center'>
+	<h2>Birthdays</h2>
+	<%= link_to '+ New Birthday', new_admin_birthday_path %>
 
-<ul>
-<% @birthdays.each do |birthday| %>
-	<li>
-		<p><%= birthday.name %> <%= link_to 'Edit', edit_admin_birthday_path(birthday), class: 'button-tiny' %></p>
-	</li>
-	<% end %>
-</ul>
+	<ul>
+	<% @birthdays.each do |birthday| %>
+		<li>
+			<p><%= birthday.created_at.strftime("%B %d, %Y") %> - <%= birthday.name %> <%= link_to 'Edit', edit_admin_birthday_path(birthday), class: 'button-tiny' %></p>
+		</li>
+		<% end %>
+	</ul>
+</div>

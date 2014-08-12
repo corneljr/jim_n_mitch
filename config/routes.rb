@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :podcasts, only: [:index]
 
   namespace :admin do 
+    get '/', to: 'sessions#new'
     resources :articles, :writers, :sessions, :podcasts, :polls, :votes, :birthdays
   end
 

@@ -2,6 +2,9 @@ class Admin::SessionsController < ApplicationController
 	layout 'admin'
 	
 	def new
+		if session[:user_id]
+			redirect_to admin_articles_path
+		end
 	end
 
 	def create

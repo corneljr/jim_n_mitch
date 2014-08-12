@@ -1,6 +1,8 @@
-<h3><%= @poll.question %></h3>
-<ul>
-	<% @options.each do |option| %>
-		<li><%= option.option_text %>: <%= option.votes.count %></li>
-	<% end %>
-</ul>
+<div class='center'>
+	<h3><%= @poll.question %></h3>
+	<ul>
+		<% @options.each do |option| %>
+			<li><%= option.option_text %>: <%= option.votes.count %></li>
+		<% end %>
+	</ul>
+</div>

@@ -1,7 +1,9 @@
-<h3 class='admin-articles-header'>Articles</h3>
-<p class='new-article-link'><%= link_to '+ New Article', new_admin_article_path %></p>
-<ul class='admin-article-list'>
-	<% @articles.each do |article| %>
-		<li><%= "#{article.title} (#{article.author})" %> <%= link_to 'Edit', edit_admin_article_path(article) %> <%= link_to 'Delete', admin_article_path(article), method: 'delete', data: { confirm: 'Are you sure bud?' } %></li>
-	<% end %>
-</ul>
+<div class='center'>
+	<h3 class='admin-articles-header'>Articles</h3>
+	<p class='new-article-link'><%= link_to '+ New Article', new_admin_article_path %></p>
+	<ul class='admin-article-list'>
+		<% @articles.each do |article| %>
+			<li><%= "#{article.title} (#{article.author})" %> <%= link_to 'Edit', edit_admin_article_path(article), class: 'button-tiny' %> <%= link_to 'Delete', admin_article_path(article), method: 'delete', data: { confirm: 'Are you sure bud?' }, class: 'button-tiny' %></li>
+		<% end %>
+	</ul>
+</div>

@@ -3,7 +3,7 @@
 <%= form_for [:admin, @poll], html: { multipart: true } do |f| %>
 	<div class='form-item'>
 		<%= f.label :question %>
-		<%= f.text_field :question %>
+		<%= f.text_area :question %>
 	</div>
 	<h4>Options</h4>
 	<div id='options'>
@@ -11,8 +11,11 @@
 			<%= render 'option_fields', :f => r %>
 		<% end %>
 		<div class='links'>
-		 <%= link_to_add_association 'add another choice', f, :options %>
+			<br>
+		 	<%= link_to_add_association 'add another choice', f, :options, class: 'button-tiny' %>
+		 	<br>
 		</div>
 	</div>
+	<br>
 	<%= f.submit 'Create' %>
 <% end %>

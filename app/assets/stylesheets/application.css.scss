@@ -26,6 +26,10 @@ body {
 	margin-right: auto;
 }
 
+.center {
+	text-align: center;
+}
+
 a {
 	text-decoration: none;
 
@@ -51,6 +55,7 @@ li {
 
 	&:hover {
 		background-color: #2980b9;
+		color: white;
 	}
 
 	&:visited {
@@ -67,6 +72,7 @@ li {
 
 	&:hover {
 		background-color: #2980b9;
+		color: white;
 	}
 
 	&:visited {
