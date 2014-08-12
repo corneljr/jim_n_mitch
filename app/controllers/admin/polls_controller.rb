@@ -1,5 +1,6 @@
 class Admin::PollsController < ApplicationController
 	layout 'admin'
+	before_action :require_login
 
 	def index
 		@polls = Poll.order('created_at DESC')

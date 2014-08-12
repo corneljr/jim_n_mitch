@@ -1,5 +1,6 @@
 class Admin::PodcastsController < ApplicationController
 	layout 'admin'
+	before_action :require_login
 
 	def new
 		@podcast = Podcast.new

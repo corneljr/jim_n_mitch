@@ -1,5 +1,6 @@
 class Admin::WritersController < ApplicationController
 	layout 'admin'
+	before_action :require_login
 
 	def new
 		@writer = Writer.new

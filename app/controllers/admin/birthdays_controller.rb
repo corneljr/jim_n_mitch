@@ -1,5 +1,6 @@
 class Admin::BirthdaysController < ApplicationController
 	layout 'admin'
+	before_action :require_login
 
 	def index
 		@birthdays = Birthday.order('created_at DESC')
