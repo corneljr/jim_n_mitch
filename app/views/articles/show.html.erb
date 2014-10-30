@@ -1,6 +1,6 @@
 <div class='article-container'>
 	<h2><%= @article.title %></h2>
 	<h4>By <%= link_to @article.author, @article.writer %></h4>
-	<%= image_tag @article.image.featured.url %>
+	<%= image_tag @article.image.featured.url, class: 'featured-image' %>
 	<p><%= raw(@article.body) %></p>
 </div>
