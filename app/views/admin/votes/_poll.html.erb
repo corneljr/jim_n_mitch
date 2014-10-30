@@ -1,1 +1,7 @@
-<h2>Thanks for Voting!</h2>
+<h2>Poll Results</h2>
+<h4><%= @poll.question %></h4>
+<ul>
+	<% @poll.options.each do |option| %>
+		<li><%= option.option_text %>: <%= option.votes.count %></li>
+	<% end %>
+</ul>

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<%#= image_tag 'image.png', class: 'main-image' %>
 	<div class='main-title'>
 		<h1><%= link_to "Sports 'N' Stuff", root_path %></h1>
 		<p>With Jim 'N' Mitch</p>
@@ -21,7 +22,7 @@
 				<li>Sports</li>
 			<% end %>
 			<%= link_to stuff_articles_path, class: 'nav-link' do %>
-				<li>Pop Culture</li>
+				<li>Stuff</li>
 			<% end %>
 			<%= link_to writers_path, class: 'nav-link' do %>
 				<li>Writers</li>
