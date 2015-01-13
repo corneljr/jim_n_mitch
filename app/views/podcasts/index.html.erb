@@ -12,7 +12,9 @@
 				<p><%= raw(podcast.description) %></p>
 			</div> 
 			<div class='podcast-buttons'>
-				<%= link_to 'Listen', podcast.podcast_file.url, class: 'podcast-play button-tiny' %> <%= link_to 'Download', podcast.podcast_file.url, class: 'podcast-download button-tiny' %>
+				<div class='buttons'>
+					<%= link_to 'Listen', podcast.podcast_file.url, class: 'podcast-play button-tiny' %> <%= link_to 'Download', podcast.podcast_file.url, class: 'podcast-download button-tiny' %>
+				</div>
 			</div>
 		</div>
 	<% end %>

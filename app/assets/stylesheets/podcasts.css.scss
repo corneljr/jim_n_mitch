@@ -26,13 +26,16 @@
 		display: none;
 	}
 	clear:both;
+	border-top: 1px solid rgba(0,0,0,.3);
+	min-height: 75px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .podcast-title {
 	position: absolute;
 	width: 50%;
 	left: 0;
-	height: 100px;
 
 	h3 {
 		margin: 0;
@@ -43,7 +46,6 @@
 	position: absolute;
 	right: 0;
 	width: 50%;
-	height: 100px;
 
 	a {
 		position: relative;
