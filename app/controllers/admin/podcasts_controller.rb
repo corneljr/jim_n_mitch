@@ -33,6 +33,12 @@ class Admin::PodcastsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@podcast = Podcast.find(params[:id])
+		@podcast.destroy
+		redirect_to root_path
+	end
+
 private
 
 	def podcast_params
