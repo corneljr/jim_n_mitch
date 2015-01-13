@@ -14,12 +14,19 @@
  *= require_self
  */
 
- @import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+
+@font-face {
+  font-family: 'Avenir';
+  src: font-url('avenir.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
 	box-sizing: border-box;
 	margin: 0;
-	font-family: 'Lora', serif;
+	font-family: 'Avenir', 'Lora', serif;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
